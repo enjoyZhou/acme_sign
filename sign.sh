@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo '正在安装依赖'
+echo '正在安装依赖...'
 
 if cat /etc/os-release | grep "centos" > /dev/null
     then
@@ -12,6 +12,8 @@ else
 fi
 
 domain=$1
+echo '域名：$domain'
+echo '正在开始签名证书...'
 cd ~
 wget https://github.com/enjoyZhou/acme_sign/raw/master/restart.server.sh
 mkdir -p .acme_sign.sh
