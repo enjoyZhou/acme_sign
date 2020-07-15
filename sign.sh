@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 domain=$1
+echo "acme_sign Version：0.0.5"
 echo "安装依赖..."
 yum install -y socat
 echo "域名：${domain}"
