@@ -1,17 +1,6 @@
 #!/bin/sh
-
-echo '正在安装依赖...'
-
-if cat /etc/os-release | grep "centos" > /dev/null
-    then
-    yum update > /dev/null
-    yum install tar wget -y > /dev/null
-else
-    apt update > /dev/null
-    apt-get install tar wget -y > /dev/null
-fi
-
 domain=$1
+
 echo '域名：$domain'
 echo '正在开始签名证书...'
 cd ~
