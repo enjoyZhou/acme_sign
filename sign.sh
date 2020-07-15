@@ -12,5 +12,5 @@ mv -f restart.server.sh ~/.acme_sign.sh/restart.server.sh
 wget -O -  https://get.acme.sh | sh
 alias acme.sh=~/.acme.sh/acme.sh
 
-acme.sh  --issue -d $domain --standalone -k ec-256
-acme.sh --installcert -d $domain --ecc --key-file /etc/v2ray/v2ray.key --fullchain-file /etc/v2ray/v2ray.crt --reloadcmd ". ~/.acme_sign.sh/restart.server.sh"
+. ~/.acme.sh/acme.sh  --issue -d $domain --standalone -k ec-256
+. ~/.acme.sh/acme.sh --installcert -d $domain --ecc --key-file /etc/v2ray/v2ray.key --fullchain-file /etc/v2ray/v2ray.crt --reloadcmd ". ~/.acme_sign.sh/restart.server.sh"

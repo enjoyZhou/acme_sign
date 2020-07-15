@@ -2,3 +2,5 @@
 
 domain=$1
 echo "域名：${domain}"
+
+. restart.server.sh
