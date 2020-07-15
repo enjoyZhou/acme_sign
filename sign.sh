@@ -14,10 +14,12 @@ fi
 domain=$1
 cd ~
 wget https://github.com/enjoyZhou/acme_sign/raw/master/restart.server.sh
+mkdir -p .acme_sign.sh
+mv -f restart.server.sh ~/.acme_sign.sh/restart.server.sh
 wget -O -  https://get.acme.sh | sh
 alias acme.sh=~/.acme.sh/acme.sh
 
 acme.sh --install-cert -d $domain \
 --key-file       /etc/v2ray/v2ray.key  \
 --fullchain-file /etc/v2ray/v2ray.crt \
---reloadcmd     ". ~/restart.server.sh"
+--reloadcmd     ". ~/.acme_sign.sh/restart.server.sh"
