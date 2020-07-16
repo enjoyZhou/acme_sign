@@ -2,6 +2,7 @@
 #!/bin/sh
 #
 domain=$1
+echo "acme_sign Version：0.0.5"
 echo "域名：${domain}"
 echo "正在开始签名证书..."
 cd /tmp
